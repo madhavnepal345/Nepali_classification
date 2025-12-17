@@ -1,8 +1,8 @@
 from datasets import load_dataset
 
 
-def load_data(train_samples=200000,test_samples=50000):
-    dataset=load_dataset("IRIIS-RESEARCH/Nepali-Text-Corpus")
+def load_data(train_samples=1000,test_samples=500):
+    dataset=load_dataset("mteb/NepaliNewsClassification")
     train_ds=dataset['train']
     test_ds=dataset['test']
 
@@ -14,4 +14,4 @@ def load_data(train_samples=200000,test_samples=50000):
 
 
 def preprocess_text(dataset):
-    return dataset["Article"],dataset["Source"]
+    return dataset["text"],dataset["label"]
