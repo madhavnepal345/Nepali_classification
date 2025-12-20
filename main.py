@@ -2,6 +2,7 @@ from src.load_data import *
 from src.evaluate import *
 from src.model_1.train import train_model,predict
 from src.model_2.train import train_model, predict_model
+from src.model_2.visualize_evaluation import visualize_attention
 
 
 def main():
